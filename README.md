@@ -31,7 +31,7 @@ Note that the application was inspired by the shiny application [ShIVA](https://
 ## Setup development environment
 
 The development environment of this project can be encapsulated in a Docker container.
-to avoid any library dependency problem, it is preferable to follow the following instructions and launch the application in a container
+To avoid any library dependency problem, it is preferable to follow the following instructions and launch the application in a container
 
 1. Install Docker. Follow the instructions on [https://docs.docker.com/install/](https://docs.docker.com/install/)
 2. Open a console (or a terminal on a Mac). On Windows you can use the excellent Git Bash which comes with the installation of Git. Clone the GIT repository:
