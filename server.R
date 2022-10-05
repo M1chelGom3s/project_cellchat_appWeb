@@ -1,5 +1,5 @@
 ################################################################################
-# UI of the app
+# server of the app
 #
 # Author: GOMES Michel
 # Created: 04-10-2022 
@@ -73,29 +73,19 @@ server <- function(input, output, session) {
                     <h6 class="m-0 font-weight-bold text-primary">View result</h6>
                 </div>
                 <div class="card-body">
-                    <!--<p>Works with any button colors, just use the <code>.btn-icon-split</code> class and
-                        the markup in the examples below. The examples below also use the
-                        <code>.text-white-50</code> helper class on the icons for additional styling,
-                        but it is not required.</p>
-                    <a href="#" class="btn btn-primary btn-icon-split">
-                        <span class="icon text-white-50">
-                            <i class="fas fa-flag"></i>
-                        </span>
-                        <span class="text">Split Button Primary</span>
-                    </a>-->
                 <div class="my-2"></div>
-                    <a  href="./#!/charts" class="btn btn-success btn-icon-split">
+                    <a  href="./#!/communactionCellCell" class="btn btn-success btn-icon-split">
                         <span class="icon text-white-50">
-                            <i class="fas fa-check"></i>
+                            <i class="<i class="fa-solid fa-chart-simple"></i>"></i>
                         </span>
                         <span class="text">plot communication</span>
                     </a>
                 <div class="my-2"></div>
-                    <a href="./#!/contribut" class="btn btn-info btn-icon-split">
+                    <a href="./#!/pathway" class="btn btn-info btn-icon-split">
                         <span class="icon text-white-50">
-                            <i class="fas fa-info-circle"></i>
+                            <i class="<i class="fa-solid fa-table-layout"></i>"></i>
                         </span>
-                        <span class="text">contribut communication</span>
+                        <span class="text">pathway communication</span>
                     </a>
                 </div>
             </div>')
