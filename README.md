@@ -59,7 +59,7 @@ to avoid any library dependency problem, it is preferable to follow the followin
 ## Data
 
 the gyrus danté (DG) cell dataset. The cell populations are annotated and created from Seurat (V3).
-ask Rejane RUA if the datasets are public or not ?
+ask Rejane if the datasets are public or not ?
 
 
 ## Deployment

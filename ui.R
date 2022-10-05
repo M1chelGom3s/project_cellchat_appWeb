@@ -56,7 +56,7 @@ pathway <- htmlTemplate("www/pathway.html",
                                   target2 = uiOutput("target2"),
 
                               pathway = uiOutput("pathway"),
-                              contribut =  plotOutput("contribut"),)
+                              commcellcell =  plotOutput("commcellcell"),)
 
 router <- make_router(
   route("/", home_page),
@@ -64,24 +64,26 @@ router <- make_router(
   route("networkCom", networkCom),
   route("pathway", pathway)
 )
+
+# Add ressource css, js and images
+pathRessource = paste(getwd(),"/www",sep="")
+addResourcePath("www", pathRessource)
 ui <- fluidPage(
    # tags$ul(
    # tags$li(a(href = route_link("/"), "www")),
    # tags$li(a(href = route_link("charts"), "charts")),
    # tags$li(a(href = route_link("contribut"), "contribut"))
    # ),
+  # tags$head(
+  #   tags$style(
+  #     HTML(
+  #       "body {
+  #         background-image: url('www/img/brain.png');
+  #       }"
+  #     )
+  #   )
+  # ),
   router$ui,
-  tags$head(includeCSS("www/css/sb-admin-2.css")),
-  tags$head(includeCSS("www/vendor/fontawesome-free/css/all.min.css")),
-  tags$head(includeScript("www/js/sb-admin-2.js")),
-  
-  tags$head(includeScript("www/vendor/jquery/jquery.min.js")),
-  tags$head(includeScript("www/vendor/bootstrap/js/bootstrap.bundle.min.js")),
-  tags$head(includeScript("www/vendor/jquery-easing/jquery.easing.min.js")),
-  
-  tags$head(includeScript("www/vendor/chart.js/Chart.min.js")),
-  
-  tags$head(includeScript("www/js/demo/chart-area-demo.js")),
-  tags$head(includeScript("www/js/demo/chart-pie-demo.js")),
+
 
 )

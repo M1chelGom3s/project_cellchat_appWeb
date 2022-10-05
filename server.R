@@ -275,7 +275,7 @@ server <- function(input, output, session) {
   })
 
   
-  output$contribut = renderPlot({
+  output$commcellcell = renderPlot({
     cellchat = contents1()
     pathways.show = pathway()
     
