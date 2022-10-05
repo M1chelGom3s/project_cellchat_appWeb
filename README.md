@@ -21,9 +21,7 @@ We will therefore use CellChat an R package designed to study intercellular comm
 
 ## Shiny app
 
-![me](https://github.com/M1chelGom3s/project_cellchat_appWeb/www/img/overview.gif)
-
-
+![me](https://github.com/M1chelGom3s/project_cellchat_appWeb/blob/master/www/img/overview.gif)
 This web application is written using the [R Shiny](https://shiny.rstudio.com/) web framework. It demonstrates the use of custom HTML templates in Shiny apps to create a fancy user experience. The theme used in this app is offered by [bootstrap](https://getbootstrap.com/). 
 
 Note that the application was inspired by the shiny application [ShIVA](https://www.biorxiv.org/content/10.1101/2022.09.20.508636v1) by Muhammad Asif, Sabrina Chenag, Sébastien Jaeger, Pierre Milpied and Lionel Spinelli.
