@@ -21,11 +21,17 @@ We will therefore use CellChat an R package designed to study intercellular comm
 
 ## Shiny app
 
+The application is under development.
+
 ![me](https://github.com/M1chelGom3s/project_cellchat_appWeb/blob/master/www/img/overview.gif)
 This web application is written using the [R Shiny](https://shiny.rstudio.com/) web framework. It demonstrates the use of custom HTML templates in Shiny apps to create a fancy user experience. The theme used in this app is offered by [bootstrap](https://getbootstrap.com/). 
 
 Note that the application was inspired by the shiny application [ShIVA](https://www.biorxiv.org/content/10.1101/2022.09.20.508636v1) by Muhammad Asif, Sabrina Chenag, Sébastien Jaeger, Pierre Milpied and Lionel Spinelli.
 
+
+## Data test
+
+[the gyrus danté cell dataset]("https://we.tl/t-kwFjilaS2X"). The cell populations are annotated and created from Seurat (V3).
 
 
 
@@ -35,7 +41,7 @@ The development environment of this project can be encapsulated in a Docker cont
 To avoid any library dependency problem, it is preferable to follow the following instructions and launch the application in a container
 
 1. Install Docker. Follow the instructions on [https://docs.docker.com/install/](https://docs.docker.com/install/)
-2. Open a console (or a terminal on a Mac). On Windows you can use the excellent Git Bash which comes with the installation of Git. Clone the GIT repository:
+2. Open a console (or a terminal on a Mac). On Windows you can use Bash which comes with the installation of Git. Clone the GIT repository:
     ```
     git clone https://github.com/M1chelGom3s/project_cellchat_appWeb.git
 
@@ -57,13 +63,8 @@ To avoid any library dependency problem, it is preferable to follow the followin
 
 6. Open the file `app.R` and hit the "Run ALL" button in the toolbar of the script editor (or CTRL+Alt+R` in the R session window). The Shiny app should open in a new window. You may need to instruct your browser to not block popup windows for this URL.
 
-## Data
-
-the gyrus danté (DG) cell dataset. The cell populations are annotated and created from Seurat (V3).
-ask Rejane if the datasets are public or not ?
-
 
 ## Deployment
 
-The app is deployed through RStudio's webservice [shinyapps.io](https://shinyapps.io/). Additionally, the app is published on [RStudio Cloud](https://rstudio.cloud/project/258634) which provides a complete development environment of the project.
+The app is deployed through RStudio's webservice [shinyapps.io](https://shinyapps.io/). 
 The 'CellChat' package has been compiled under R 4.1.3.
