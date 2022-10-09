@@ -15,4 +15,5 @@ RUN Rscript -e "install.packages('tidyverse')"
 RUN Rscript -e "install.packages('Seurat')"
 RUN Rscript -e "install.packages('patchwork')"
 RUN Rscript -e "install.packages('DT')"
+RUN Rscript -e "install.packages('shinycssloaders')"
 CMD ["/init"]

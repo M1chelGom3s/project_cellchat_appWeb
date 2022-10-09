@@ -66,9 +66,7 @@ server <- function(input, output, session) {
 
     
   })
-  output$resview = renderUI({
-    action1 = contents1()
-    HTML('<div class="card shadow mb-4">
+  resview = reactive({'<div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">View result</h6>
                 </div>
@@ -88,26 +86,85 @@ server <- function(input, output, session) {
                         <span class="text">pathway communication</span>
                     </a>
                 </div>
-            </div>')
-  })
-  output$nb_cell = renderText({
-    cellchat = contents1()
-    cellchat@data %>% as.tibble() %>% nrow()
-    
-  })
-  
-  output$nb_gene = renderText({
-    cellchat = contents1()
-    
-    cellchat@data %>% as.tibble() %>% ncol()
-    
+            </div>'
   })
 
-  output$nb_cellType = renderText({
+  output$nb_cell_type_gene = renderUI({
+    resview = resview()
     cellchat = contents1()
 
-    levels(cellchat@idents) %>% length()
-  })
+    nb_cell_type = levels(cellchat@idents) %>% length()
+    nb_gene = cellchat@data %>% as.tibble() %>% ncol()
+    nb_cell = cellchat@data %>% as.tibble() %>% nrow()
+
+    contentHtml = paste('<div class="row">
+                        <div class="has-animation animation-rtl" data-delay="100">
+                            ',resview,'
+                        </div>
+                        
+
+                        <!-- Nb cells -->
+                        <div class="has-animation animation-rtl" data-delay="1000">
+                            
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                <h5>Nb cells</h5>
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> ',nb_cell,' </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa fa-bar-chart fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- NB genes -->
+                        <div class="has-animation animation-rtl" data-delay="1500">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                <h5>NB genes </h5>
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">',nb_gene,'</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa fa-bar-chart fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <!-- NB cells type -->
+                        <div class="has-animation animation-rtl" data-delay="2000">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                <h5>NB cells types</h5>
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">',nb_cell_type,'</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa fa-bar-chart fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>')
+    HTML(contentHtml)
+
+    })
   
 
     output$source1 = renderUI({
@@ -177,7 +234,7 @@ server <- function(input, output, session) {
       groupSize = as.numeric(table(cellchat@idents))
 
       netVisual_circle(cellchat@net$count, vertex.weight = groupSize, weight.scale = T,
-    label.edge = F, title.name = "Number of interactions", sources.use = NULL)
+    label.edge = F, title.name = "All interactions", sources.use = NULL)
   })
 
   output$source2 = renderUI({

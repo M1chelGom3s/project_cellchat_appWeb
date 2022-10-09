@@ -6,6 +6,7 @@
 ################################################################################
 library(shiny)
 library(shiny.router)
+library(shinycssloaders)
 setwd(".")
 #library(shinydashboard)
 library(tidyverse)

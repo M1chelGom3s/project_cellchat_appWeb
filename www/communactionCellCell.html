@@ -42,7 +42,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="./#!/">
                     <i class="fas fa-fw fa-folder-open"></i>
                     <span>Data import</span></a>
@@ -86,7 +86,7 @@
             </li>-->
 
             <!-- Nav Item - communactionCellCell -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="./#!/communactionCellCell">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>communactionCellCell</span></a>
@@ -155,14 +155,11 @@
                     </div>
                     
                     <div class="row">
-
-                        <!-- Area Chart -->
-                         <!-- Plot 2 -->
-                         <div class="col-xl-4 col-lg-5">
+                        <div class="col-xl-4 col-lg-5">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">cell interaction probabilities</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -178,13 +175,43 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Card Body -->
 
-                                        {{visual_circle}}
-                                        <hr>
-                                
-                                 The number of pairs of ligand receptors.
-                                The more pairs of ligand receptors there are, the thicker the line.
+                                {{visual_circle_all}}
+
+                                <hr>
+                                    The intensity (probability) of communication between the cells.
+                                The thickness of the line is proportional to the sum of the probability values.
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">cell interaction probabilities</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header">Dropdown Header:</div>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{visual_circle}}
+                                <hr>
+                                    The intensity (probability) of communication between the cells.
+                                The thickness of the line is proportional to the sum of the probability values.
 
                             </div>
                         </div>
@@ -195,7 +222,7 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Interaction cell weights/strength</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -213,11 +240,12 @@
                                 </div>
                                 <!-- Card Body -->
 
-                                        {{visual_circle1}}
-                                        <hr>
+                                {{visual_circle1}}
+                                <hr>
+                                    The number of pairs of ligand receptors.
+                                The more pairs of ligand receptors there are, the thicker the line.
                                 
-                                         The intensity (probability) of communication between the cells.
-                                        The thickness of the line is proportional to the sum of the probability values.
+                                         
 
 
    
@@ -231,9 +259,7 @@
             </div>
             <!-- End of Main Content -->
 
-            <!-- Footer -->
 
-            <!-- End of Footer -->
 
         </div>
         <!-- End of Content Wrapper -->

@@ -52,5 +52,13 @@
     }, 1000, 'easeInOutExpo');
     e.preventDefault();
   });
+  $(document).ready(function() {
+    $('.has-animation').each(function(index) {
+      $(this).delay($(this).data('delay')).queue(function(){
+        $(this).addClass('animate-in');
+      });
+    });
+  });
+  
 
 })(jQuery); // End of use strict

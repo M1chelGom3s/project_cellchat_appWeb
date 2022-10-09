@@ -12,13 +12,13 @@
     <title>Dashboard</title>
 
     <!-- Custom fonts for this template-->
-    <link href="www/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="www/vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="www/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="www/css/sb-admin-2.css" rel="stylesheet">
 
 </head>
 
@@ -50,11 +50,6 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-
-            <!-- Heading -->
-
-
-            <!-- Nav Item - Utilities Collapse Menu -->
            
 
             <!-- Divider -->
@@ -74,12 +69,12 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Communication <br> between cells:</h6>
+                        <h5 class="collapse-header">Communication <br> between cells:</h5>
                         <a class="collapse-item" href="login.html">Visual circle</a>
                         <!--<a class="collapse-item" href="register.html">Register</a>
                         <a class="collapse-item" href="forgot-password.html">Forgot Password</a>-->
                         <!--<div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
+                        <h5 class="collapse-header">Other Pages:</h5>
                         <a class="collapse-item" href="404.html">404 Page</a>
                         <a class="collapse-item" href="blank.html">Blank Page</a>
                     </div>
@@ -106,9 +101,6 @@
                     <span> pathway</span></a>
             </li>
 
-            
-
-
         </ul>
         <!-- End of Sidebar -->
 
@@ -118,122 +110,50 @@
             <!-- Main Content -->
             <div id="content">
 
-                <!-- Topbar -->
-
-
-
-                    <!-- Topbar Navbar -->
-   
-                <!-- End of Topbar -->
-
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="row">
-                        {{resview}}
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                <h6>Nb cells</h6>
-                                            </div>
-                                            <div class="h6 mb-0 font-weight-bold text-gray-800"> {{nb_cell}} </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fa fa-bar-chart fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                <h6>NB genes </h6>
-                                            </div>
-                                            <div class="h6 mb-0 font-weight-bold text-gray-800"> {{nb_gene}} </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fa fa-bar-chart fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                       
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                <h6>NB cells types</h6>
-                                            </div>
-                                            <div class="h6 mb-0 font-weight-bold text-gray-800"> {{nb_cellType}} </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fa fa-bar-chart fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="has-animation animation-rtl" data-delay="100">
+                        {{nb_cell_type_gene}}
+                    </div>  
 
                     <!-- Content Row -->
                     <div class="row">
 
 
                         <!-- select file1 firste input -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="form-group shiny-input-container">
-                                                <label class="control-label" id="file1-label" for="file1">
-                                                    <h6>          </h6> 
-                                                </label>
-                                                <div class="input-group">
-                                                  <label class="input-group-btn input-group-prepend">
-                                                    <span class="btn btn-default btn-file">
-                                                      <input id="file1" name="file1" type="file" style="opacity:0;"/>
-                                                      <h2>Select file </h2>
-                                                    </span>
-                                                  </label>
-                                                  <input type="text" class="form-control" placeholder="No file selected" readonly="readonly"/>
-                                                  
-                                                </div>
-                                                <div id="file1_progress" class="progress active shiny-file-input-progress">
-                                                  <div class="progress-bar"></div>
-                                                </div>
-                                            </div>
-                                             
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-file-contract fa-2x text-gray-300"></i>
-                                        </div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="form-group shiny-input-container">
+                                    <label class="control-label" id="file1-label" for="file1">
+                                        <h5>          </h5> 
+                                    </label>
+                                    <div class="input-group">
+                                      <label class="input-group-btn input-group-prepend">
+                                        <span class="btn btn-default btn-file">
+                                          <input id="file1" name="file1" type="file" style="opacity:0;"/>
+                                          <h2>Select file </h2>
+                                        </span>
+                                      </label>
+                                      <input type="text" class="form-control" placeholder="No file selected" readonly="readonly"/>
+                                      
+                                    </div>
+                                    <div id="file1_progress" class="progress active shiny-file-input-progress">
+                                      <div class="progress-bar"></div>
                                     </div>
                                 </div>
+                                 
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-file-contract fa-2x text-gray-300"></i>
                             </div>
                         </div>
                         
                         
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
+                                <h5 class="m-0 font-weight-bold text-primary">Development Approach</h5>
                             </div>
                             <div class="card-body">
                                 <p>This web application is still in beta version.
@@ -241,41 +161,19 @@
                                     Thus cellchat combines the interaction of the ligand receptor and its cofactors to simulate intercellular communication.
                                     <a href="https://htmlpreview.github.io/?https://github.com/sqjin/CellChat/blob/master/tutorial/CellChat-vignette.html">  The analysis of the Cellchat model is adapted from the code of Suoqin Jin.
                                         (Inference and analysis of cell-cell communication using CellChat) </a> 
-                                    
-                                    
                                     </p>
                                 <p class="mb-0">We will therefore use CellChat an R package designed to study intercellular communications from scRNA-seq data, CellChat provides features for data exploration, analysis and visualization.
                                     The 'CellChat' package has been compiled under R version 4.1.3 (2022-03-10).</p>
                             </div>
                         </div>
-                        {{visual_circle_all}}
-                        
-                        
-                        
                         
                     </div>
-                    <!-- Content Row -->
-                    <!-- Content Row -->
                     
-                        
-
                 </div>
-                <!-- /.container-fluid -->
 
             </div>
             
-
             <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <!--<footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
-                    </div>
-                </div>
-            </footer>-->
-            <!-- End of Footer -->
 
         </div>
         <!-- End of Content Wrapper -->
@@ -287,21 +185,21 @@
     
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="www/vendor/jquery/jquery.js"></script>
+    <script src="www/vendor/bootstrap/js/bootstrap.bundle.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="www/vendor/jquery-easing/jquery.easing.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="www/js/sb-admin-2.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="www/vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="www/js/demo/chart-area-demo.js"></script>
+    <script src="www/js/demo/chart-pie-demo.js"></script>
 
 </body>
 
