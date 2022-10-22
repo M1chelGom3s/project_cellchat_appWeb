@@ -31,7 +31,7 @@ Note that the application was inspired by the shiny application [ShIVA](https://
 
 ## Data test
 
-[the gyrus danté cell dataset]("https://we.tl/t-kwFjilaS2X"). The cell populations are annotated and created from Seurat (V3).
+[the gyrus danté cell dataset](https://we.tl/t-kwFjilaS2X). The cell populations are annotated and created from Seurat (V3).
 
 
 
