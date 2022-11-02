@@ -10,6 +10,7 @@ RUN echo "options(repos = c(CRAN = 'https://cran.rstudio.com/'), download.file.m
 
 # install packrat
 RUN Rscript -e "install.packages('shiny')"
+RUN Rscript -e "install.packages('NMF')"
 RUN Rscript -e "install.packages('shiny.router')"
 RUN Rscript -e "install.packages('tidyverse')"
 RUN Rscript -e "install.packages('Seurat')"
